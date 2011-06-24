@@ -1,0 +1,7 @@
+{ "name" : "curve25519"
+, "description" : "A binding to the curve25519-donna library."
+, "version" : "1.0.0"
+, "author" : "Jann Horn <jannhorn@googlemail.com>"
+, "main" : "index.js"
+, "scripts" : { "test" : "node test.js" }
+}

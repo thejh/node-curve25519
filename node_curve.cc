@@ -1,4 +1,3 @@
-
 #include <v8.h>
 #include <node.h>
 #include <node_buffer.h>
@@ -31,3 +30,6 @@ extern "C" void init (Handle<Object> target) {
   HandleScope scope;
   NODE_SET_METHOD(target, "curve", DoCurve);
 }
+
+
+NODE_MODULE(curve, init)

@@ -1,4 +1,4 @@
-var binding = require("./build/default/curve");
+var binding = require("./build/Release/curve");
 
 var basepoint = (function() {
   var buf = new Buffer(32);
@@ -17,6 +17,7 @@ exports.makeSecretKey = function(mysecret) {
   mysecret[0] &= 248;
   mysecret[31] &= 127;
   mysecret[31] |= 64;
+  return mysecret;
 }
 
 exports.derivePublicKey = function (mysecret) {
@@ -25,7 +26,7 @@ exports.derivePublicKey = function (mysecret) {
   return mypublic;
 }
 
-exports.deriveSharedSecret(mysecret, hispublic) {
+exports.deriveSharedSecret = function (mysecret, hispublic) {
   var sharedSecret = new Buffer(32);
   binding.curve(sharedSecret, mysecret, hispublic);
   return sharedSecret;

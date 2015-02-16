@@ -1,4 +1,4 @@
-var curve = require("./build/default/curve");
+var curve = require("bindings")("curve");
 
 var buf1 = new Buffer(64);
 var buf2 = new Buffer(64);

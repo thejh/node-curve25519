@@ -1,4 +1,4 @@
-var binding = require("./build/Release/curve");
+var binding = require("bindings")("curve");
 
 var basepoint = (function() {
   var buf = new Buffer(32);

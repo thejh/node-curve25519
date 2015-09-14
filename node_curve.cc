@@ -16,20 +16,20 @@ static NAN_METHOD(DoCurve);
 extern "C" void init (Handle<Object>);
 
 static NAN_METHOD(DoCurve) {
-  NanScope();
+  Nan::HandleScope scope;
   const char *usage = "usage: curve(a, b, c)";
-  if (args.Length() != 3) {
-    return NanThrowError(usage);
+  if (info.Length() != 3) {
+    return Nan::ThrowSyntaxError(usage);
   }
-  unsigned char* arg0 = (unsigned char*) Buffer::Data(args[0]->ToObject());
-  unsigned char* arg1 = (unsigned char*) Buffer::Data(args[1]->ToObject());
-  unsigned char* arg2 = (unsigned char*) Buffer::Data(args[2]->ToObject());
+  unsigned char* arg0 = (unsigned char*) Buffer::Data(info[0]->ToObject());
+  unsigned char* arg1 = (unsigned char*) Buffer::Data(info[1]->ToObject());
+  unsigned char* arg2 = (unsigned char*) Buffer::Data(info[2]->ToObject());
   curve25519_donna(arg0, arg1, arg2);
 }
 
 extern "C" void init (Handle<Object> target) {
-  NanScope();
-  NODE_SET_METHOD(target, "curve", DoCurve);
+  Nan::HandleScope scope;
+  Nan::SetMethod(target, "curve", DoCurve);
 }
 
 

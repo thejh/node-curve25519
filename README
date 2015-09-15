@@ -1,7 +1,9 @@
-########################################## THIS IS OUTDATED ##########################################
-### There is a maintained fork at <https://github.com/volschin/node-curve25519>, try that instead. ###
-### Or, if possible, use libsodium instead of working with curve25519 directly.                    ###
-######################################################################################################
+########################### THIS IS OUTDATED ############################
+### There is a maintained fork at                                     ###
+### <https://github.com/volschin/node-curve25519>, try that instead.  ###
+### Or, if possible, use libsodium instead of working with curve25519
+### directly.                                                         ###
+#########################################################################
 
 This is a binding to the curve25519-donna library for node. Usage:
 

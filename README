@@ -1,4 +1,4 @@
-########################### THIS IS OUTDATED ############################
+########################### THIS IS OUTDATED! ###########################
 ### There is a maintained fork at                                     ###
 ### <https://github.com/volschin/node-curve25519>, try that instead.  ###
 ### Or, if possible, use libsodium instead of working with curve25519 ###
